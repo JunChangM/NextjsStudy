@@ -7,7 +7,7 @@ type FizzProps= {
 
 const Fizz = (props: FizzProps) => {
     const {isFizz} = props
-    console.log('Fizz가 다시 그려졌습니다. isFizz=${isFizz}')
+    console.log(`Fizz가 다시 그려졌습니다. isFizz=${isFizz}`)
     return <span>{isFizz? 'Fizz' : ''}</span>
 }
 
@@ -18,7 +18,7 @@ type BuzzProps = {
 
 const Buzz = memo<BuzzProps>((props) => {
     const {isBuzz} = props
-    console.log('Buzz가 다시 그려졌습니다. isBuzz=${isBuzz}')
+    console.log(`Buzz가 다시 그려졌습니다. isBuzz=${isBuzz}`)
     return (
     <span>{isBuzz? 'Buzz' : ''}</span>
     )
@@ -30,13 +30,13 @@ export const Parent = () => {
     const isBuzz = count %5 === 0
     
     const onBuzzClick = () => {
-        console.log('Buzz가 클릭되었습니다. isBuzz=${isBuzz}')
+        console.log(`Buzz가 클릭되었습니다. isBuzz=${isBuzz}`)
     }
-    console.log('parent가 다시 그려졌습니다. count=${count}')
+    console.log(`parent가 다시 그려졌습니다. count=${count}`)
     return(
         <div>
             <button onClick={() => setCount((c) => c+1)}>+1</button>
-            <p>{'현재 카운트: ${count}'}</p>
+            <p>{`현재 카운트: ${count}`} </p>
             <p>
                 <Fizz isFizz={isFizz} />
                 <Buzz isBuzz={isBuzz} onClick={onBuzzClick} /> 

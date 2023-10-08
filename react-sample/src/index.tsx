@@ -4,10 +4,26 @@ import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Hello from './components/Hello';
+import Name from './components/Name';
+import Message from './components/Message';
+import ContextSample from './components/ContextSample';
+import ContainerSample from './components/ContainerSample';
+import Parent from './components/Parent';
+import Clock from './components/Clock';
+import UseMemoSample from './components/UseMemoSample';
 
 ReactDOM.render(
   <React.StrictMode>
     <Hello />
+    <Name />
+    <Message />
+    <ContextSample />
+    <ContainerSample />
+    <Parent />
+    <Clock />
+    <UseMemoSample />
+    
+    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
